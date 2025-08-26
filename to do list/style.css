@@ -1,4 +1,4 @@
-/* 🌌 Fondo degradado animado oscuro */
+/* Fondo degradado animado oscuro */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   height: 100vh;
@@ -124,4 +124,5 @@ li.completed {
   transform: scale(1.1);
   box-shadow: 0px 4px 12px rgba(255, 65, 108, 0.6);
 }
+
 
