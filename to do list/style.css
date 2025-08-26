@@ -1,0 +1,126 @@
+/* 🌌 Fondo degradado animado oscuro */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 50px;
+  background: linear-gradient(135deg, #0f0f0f, #1a1a2e, #16213e, #0f3460);
+  background-size: 400% 400%;
+  animation: gradientBG 12s ease infinite;
+  color: #f1f1f1;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* 📦 Contenedor oscuro translúcido */
+.container {
+  background: rgba(20, 20, 20, 0.85);
+  backdrop-filter: blur(8px);
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+  width: 380px;
+}
+
+/* Título */
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 26px;
+  font-weight: bold;
+  color: #00eaff;
+  text-shadow: 0 0 10px rgba(0,234,255,0.7);
+}
+
+/* Input + botón */
+.input-section {
+  display: flex;
+  gap: 10px;
+}
+
+input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  font-size: 14px;
+  background: #1e1e2f;
+  color: #fff;
+}
+
+input::placeholder {
+  color: #888;
+}
+
+button {
+  padding: 10px 14px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #00eaff, #0072ff);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 4px 12px rgba(0, 234, 255, 0.5);
+}
+
+/* Lista de tareas */
+ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+li {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #eee;
+  transition: transform 0.2s, background 0.3s;
+}
+
+li:hover {
+  transform: translateX(4px);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* ✅ Tarea completada */
+li.completed {
+  text-decoration: line-through;
+  color: #a0fca0;
+  background: rgba(76, 175, 80, 0.3);
+  font-style: italic;
+}
+
+/* ❌ Botón eliminar */
+.deleteBtn {
+  background: linear-gradient(135deg, #ff416c, #ff4b2b);
+  border: none;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.deleteBtn:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 4px 12px rgba(255, 65, 108, 0.6);
+}
